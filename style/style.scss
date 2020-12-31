@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(23, 25, 33);
+}
+header nav #navbar {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  background-color: #1d1f29;
+  color: rgb(232, 230, 227);
+  margin-left: 68%;
+  border-bottom-left-radius: 10px;
+  li {
+    padding: 1em;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    margin-left: 40%;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+main {
+  margin-bottom: 10em;
+  position: relative;
+  .intro {
+    color: rgb(232, 230, 227);
+    text-align: center;
+    font-size: 28px;
+    margin-top: 1em;
+  }
+  .game {
+    display: none;
+  }
+  .count {
+    position: sticky;
+    top: 0;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    .container {
+      padding: 2em;
+      margin-left: 1em;
+      color: rgb(232, 230, 227);
+      background-color: #1d1f29;
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  .elements {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    img {
+      width: 20%;
+      margin: 1em 2em;
+      @media (max-width: 768px) {
+        width: 30%;
+      }
+    }
+  }
+}
+
+footer #box {
+  position: fixed;
+  display: none;
+  bottom: 0;
+  width: 100%;
+  color: rgb(232, 230, 227);
+  opacity: 1;
+  .name {
+    background-color: rgb(12, 10, 10);
+    width: 25%;
+    text-align: center;
+    font-weight: bold;
+    border-top-right-radius: 10px;
+  }
+  .dialog {
+    background-color: #1d1f29;
+    width: 100%;
+    padding: 5% 0;
+    p {
+      text-align: center;
+      margin: 0 15px;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  .items {
+    position: absolute;
+    background-color: #1d1f29;
+    color: rgb(232, 230, 227);
+    top: 0;
+    left: 50%;
+    bottom: 50%;
+    width: 60%;
+    transform: translateX(-50%) translateY(50%);
+    .head {
+      padding: 1em 2em;
+      font-size: small;
+    }
+    .content {
+      margin-top: 2em;
+      transform: translateY(50%);
+      p {
+        margin: 0 1em;
+      }
+    }
+    .close {
+      position: absolute;
+      right: -10px;
+      font-size: 20px;
+      top: -20px;
+      color: #fff;
+      .x {
+        font-size: small;
+        padding: 2px 12px;
+        border-radius: 5px;
+        background-color: rgb(42, 46, 63);
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  :root {
+    font-size: 12px;
+  }
+}
