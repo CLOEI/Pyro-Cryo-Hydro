@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
 }
 body {
   background-color: rgb(23, 25, 33);
@@ -17,6 +21,13 @@ header nav #navbar {
   li {
     padding: 1em;
     cursor: pointer;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    &:hover {
+      background-color: rgb(23, 25, 33);
+    }
   }
   @media (max-width: 768px) {
     margin-left: 40%;
@@ -35,6 +46,13 @@ main {
   }
   .game {
     display: none;
+    h1 {
+      text-align: center;
+      margin: 1em 0;
+      color: rgb(232, 230, 227);
+      font-family: "Lato", sans-serif;
+      font-weight: 900;
+    }
   }
   .count {
     position: sticky;
@@ -64,6 +82,7 @@ main {
       @media (max-width: 768px) {
         width: 30%;
       }
+      cursor: pointer;
     }
   }
 }
@@ -109,14 +128,15 @@ footer #box {
     left: 50%;
     bottom: 50%;
     width: 60%;
+    display: flex;
+    flex-direction: column;
     transform: translateX(-50%) translateY(50%);
     .head {
       padding: 1em 2em;
       font-size: small;
     }
     .content {
-      margin-top: 2em;
-      transform: translateY(50%);
+      margin: auto;
       p {
         margin: 0 1em;
       }

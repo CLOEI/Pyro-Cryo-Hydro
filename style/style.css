@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap");
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
 }
 
 body {
@@ -28,6 +31,15 @@ header nav #navbar li {
   cursor: pointer;
 }
 
+header nav #navbar li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header nav #navbar li:hover {
+  background-color: #171921;
+}
+
 @media (max-width: 768px) {
   header nav #navbar {
     margin-left: 40%;
@@ -49,6 +61,14 @@ main .intro {
 
 main .game {
   display: none;
+}
+
+main .game h1 {
+  text-align: center;
+  margin: 1em 0;
+  color: #e8e6e3;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
 }
 
 main .count {
@@ -90,6 +110,7 @@ main .elements {
 main .elements img {
   width: 20%;
   margin: 1em 2em;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -144,6 +165,13 @@ footer #box .dialog p {
   left: 50%;
   bottom: 50%;
   width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transform: translateX(-50%) translateY(50%);
           transform: translateX(-50%) translateY(50%);
 }
@@ -154,9 +182,7 @@ footer #box .dialog p {
 }
 
 .info .items .content {
-  margin-top: 2em;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  margin: auto;
 }
 
 .info .items .content p {
